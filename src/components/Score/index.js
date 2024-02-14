@@ -100,7 +100,7 @@ const Score = () => {
                     </div>
 
 
-                    <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit} >SUBMIT</button>
+                    <button className="grab" style={{width:"220px", marginTop: '80px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit} >SUBMIT</button>
                     
 
                     {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>

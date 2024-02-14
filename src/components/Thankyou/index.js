@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles&Assets/style.css';
-// import logo2 from '../Styles&Assets/logo2.png';
+import tick from '../Styles&Assets/tick2.png';
 import frame from '../Styles&Assets/LockupFrame.png';
 import { useLocation } from 'react-router-dom';
 import firebase from '../../firebase';
@@ -43,9 +43,9 @@ const Instructions = () =>{
                     {userData && <h1 className="header" style={{color: 'black'}} >Thank You, {userData.Name}!</h1>}
                 </div>
 
-                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                    <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
-                </div> */}
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
+                    <img style={{width: '200px'}} src={tick} alt="Nissan Logo"/>
+                </div>
             </div>
         </div>
     )
