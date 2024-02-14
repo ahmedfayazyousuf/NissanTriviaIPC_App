@@ -40,7 +40,8 @@ const Video4 = () => {
         <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
 
             <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                {userData && <p style={{ color: 'black', fontWeight: '900'}}>{userData.Name}</p>}
+                {/* {userData && <p style={{ color: 'black', fontWeight: '900'}}>{userData.Name}</p>} */}
+                <p style={{ color: 'black', fontWeight: '900'}}>Identify fake parts</p>
             </div>
 
             <div style={{ width: '100vw', height: '60vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
