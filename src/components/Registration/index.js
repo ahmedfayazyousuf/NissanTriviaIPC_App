@@ -67,7 +67,7 @@ const Registration = () =>{
                 <div style={{display: 'flex', flexDirection: 'column', gap:'5px', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '10px'}}>
-                        <img style={{width: '320px'}} src={frame} alt="Geely Logo"/>
+                        <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px'}}>
@@ -95,7 +95,7 @@ const Registration = () =>{
                     </button>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                        <img style={{width: '200px'}} src={logo2} alt="Geely Logo"/>
+                        <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
                     </div>
 
                 </div>

@@ -36,7 +36,7 @@ const Instructions = () =>{
             <div style={{display: 'flex', flexDirection: 'column', width: '40%', gap:'5px', alignItems: 'center', justifyContent:'flex-start', height: '100vh'}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '10px'}}>
-                    <img style={{width: '320px'}} src={frame} alt="Geely Logo"/>
+                    <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '20px'}}>
@@ -44,7 +44,7 @@ const Instructions = () =>{
                 </div>
 
                 {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                    <img style={{width: '200px'}} src={logo2} alt="Geely Logo"/>
+                    <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
                 </div> */}
             </div>
         </div>

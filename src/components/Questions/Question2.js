@@ -107,7 +107,7 @@ return(
             
             
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '10px'}}>
-                <img style={{width: '320px'}} src={frame} alt="Geely Logo"/>
+                <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom: '-20px'}}>
@@ -133,7 +133,7 @@ return(
             <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
 
             {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                <img style={{width: '200px'}} src={logo2} alt="Geely Logo"/>
+                <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
             </div> */}
             
         </div>
