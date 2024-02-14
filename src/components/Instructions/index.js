@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles&Assets/style.css';
-import logo2 from '../Styles&Assets/logo2.png';
+// import logo2 from '../Styles&Assets/logo2.png';
 import frame from '../Styles&Assets/LockupFrame.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
@@ -57,9 +57,9 @@ const Instructions = () =>{
                     <p style={{color: 'black', fontStyle:'italic', fontSize: '12px'}}>Blah Blah</p>
                 </div>
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
+                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
                     <img style={{width: '200px'}} src={logo2} alt="Geely Logo"/>
-                </div>
+                </div> */}
 
                 <button onClick={handleSubmit} style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
                     BEGIN
