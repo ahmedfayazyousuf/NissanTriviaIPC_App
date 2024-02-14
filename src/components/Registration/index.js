@@ -90,7 +90,7 @@ const Registration = () =>{
                         <p id="error" style={{color: 'red', padding: '0', margin: '0', fontSize: '10px'}}></p>
                     </div>
 
-                    <button onClick={handleSubmit}  style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}}  >
+                    <button onClick={handleSubmit}  style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'black', backgroundColor: 'white', cursor: 'grab'}} >
                         SUBMIT
                     </button>
 

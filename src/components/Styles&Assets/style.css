@@ -25,16 +25,16 @@ input[type=number] {
   font-family: myFont;
 }
 
-@font-face{
+/* @font-face{
   font-family: myFontBold;
   src:url(/src/components/Styles&Assets/Fonts/NissanBrand-Bold.ttf);
 }
 h1{
   font-family: myFontBold;
-}
+} */
 
 body{
-    background-image: url("desktopbg.png");
+  background-image: url("phonebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

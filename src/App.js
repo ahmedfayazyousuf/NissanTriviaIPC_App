@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import Error from './components/Error';
 import Registration from './components/Registration';
 import Score from './components/Score';
+import Thankyou from './components/Thankyou';
 
 import Video1 from './components/Videos/Video1.js';
 import Video2 from './components/Videos/Video2.js';
@@ -38,6 +39,7 @@ function App() {
             <Route path="/Question4" element={<Question4/>} />
 
             <Route path="/score" element={<Score />} />
+            <Route path="/Thankyou" element={<Thankyou />} />
             
             <Route exact path="*" element={<Error />} />
         </Routes>
