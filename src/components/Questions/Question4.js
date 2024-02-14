@@ -1,4 +1,3 @@
-// import logo2 from '../Styles&Assets/logo2.png';
 import frame from '../Styles&Assets/LockupFrame.png'
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -11,9 +10,8 @@ const Question4 = () => {
     const [user, setUser] = useState(null);
     
     useEffect(() => {
-        console.log("userId in Video1:", id); // Log the userId to check if it's correct
-        console.log("userData in Video1 useEffect:", userData); // Log userData to check if it's passed correctly
-        // Fetch user data from Firebase using userId
+        console.log("userId in Video1:", id); 
+        console.log("userData in Video1 useEffect:", userData);
         const Users = firebase.firestore().collection("Users");
 
         Users.doc(id).get()
@@ -33,26 +31,35 @@ const Question4 = () => {
 
 
     function handleSubmit() {
+
         const Users = firebase.firestore().collection("Users");
-        // Assuming the correct answer is option1
-        if (document.getElementById('option1').style.backgroundColor === 'black') {
-            // Increment the Score field by 1
-            Users.doc(id).update({
-                Score: firebase.firestore.FieldValue.increment(1),
-            })
-            .then(() => {
-                console.log("Score updated successfully!");
-            })
-            .catch((error) => {
-                console.error("Error updating score:", error);
-            });
+
+        if (document.getElementById('option1').style.backgroundColor === 'transparent' && document.getElementById('option2').style.backgroundColor === 'transparent' && document.getElementById('option3').style.backgroundColor === 'transparent' && document.getElementById('option4').style.backgroundColor === 'transparent') {
+            
+            document.getElementById("error").innerHTML = "PLEASE CHOOSE AN OPTION";
+            console.log("BOOMER");
+            return;
+
         }
 
-        // Your existing code for navigation
-        navigate("/Score", { state: { id, userData } });
+        if (document.getElementById('option1').style.backgroundColor === 'black' || document.getElementById('option2').style.backgroundColor === 'black' || document.getElementById('option3').style.backgroundColor === 'black' || document.getElementById('option4').style.backgroundColor === 'black') {
+            if (document.getElementById('option3').style.backgroundColor === 'black') {
+                Users.doc(id).update({
+                    Score: firebase.firestore.FieldValue.increment(1),
+                })
+                .then(() => {
+                    console.log("Score updated successfully!");
+                })
+                .catch((error) => {
+                    console.error("Error updating score:", error);
+                });
+            }
+            navigate("/Score", { state: { id, userData } });
+        }
+
     }
 
-    console.log("user in Video1:", user); // Log user to check if it's fetched correctly
+    console.log("user in Video1:", user); 
 
     function Handleclick(e){
         if(e === 'option1'){
@@ -114,7 +121,7 @@ return(
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', padding: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p id='qn' style={{fontSize: '15px', color: 'black', fontWeight: '900'}}>What is the first indicator you notice to differentiate genuine from fake?</p>
+                <p id='qn' style={{fontSize: '15px', color: 'black'}}>What is the first indicator you notice to differentiate genuine from fake?</p>
             </div>  
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '350px', marginTop: '15px'}}>
@@ -129,11 +136,11 @@ return(
                     </div>
             </div>
 
-            <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
+            <div style={{width: '300px', height: '40px', padding: '0', margin: '0'}}>
+                <p id="error" style={{color: 'red', padding: '0', margin: '0', fontSize: '10px'}}></p>
+            </div>
 
-            {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
-            </div> */}
+            <button className="grab" style={{width:"220px", marginTop: '-15px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
             
         </div>
     </div>

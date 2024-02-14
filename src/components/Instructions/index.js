@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles&Assets/style.css';
-// import logo2 from '../Styles&Assets/logo2.png';
 import frame from '../Styles&Assets/LockupFrame.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
@@ -13,7 +12,6 @@ const Instructions = () =>{
     const [userData, setUserData] = useState(null);
 
     useEffect(() => {
-        // Fetch user data from Firebase using userId
         const Users = firebase.firestore().collection("Users");
 
         Users.doc(userId).get()
@@ -44,10 +42,7 @@ const Instructions = () =>{
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '50px', marginBottom: '10px'}}>
                     <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                 </div>
-
-                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
-                    <h1 className="header" style={{color: 'black'}} >INSTRUCTIONS</h1>
-                </div> */}
+                
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '0px', marginBottom: '10px'}}>
                     {userData && <p style={{color: 'black', fontSize: '20px', fontWeight: '900'}}>Welcome, {userData.Name}!</p>}
@@ -62,10 +57,6 @@ const Instructions = () =>{
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
                     <p style={{color: 'black'}}>Challenge your knowledge, beat your own score, and become the ultimate trivia champion! Good luck!</p>
                 </div>
-
-                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                    <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
-                </div> */}
 
                 <button onClick={handleSubmit} style={{width:"220px", marginTop: '25px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
                     BEGIN
