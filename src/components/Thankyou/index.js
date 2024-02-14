@@ -35,7 +35,7 @@ const Instructions = () =>{
 
             <div style={{display: 'flex', flexDirection: 'column', width: '40%', gap:'5px', alignItems: 'center', justifyContent:'flex-start', height: '100vh'}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '10px'}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '50px', marginBottom: '10px'}}>
                     <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                 </div>
 
