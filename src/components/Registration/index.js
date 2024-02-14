@@ -1,4 +1,3 @@
-import logo2 from '../Styles&Assets/logo2.png';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import firebase from '../../firebase';
@@ -6,7 +5,6 @@ import '../Styles&Assets/style.css';
 import frame from '../Styles&Assets/LockupFrame.png'
 
 const Registration = () =>{
-
     const history = useNavigate();
     // eslint-disable-next-line
     const [select, setSelect] = useState('')
@@ -18,8 +16,6 @@ const Registration = () =>{
         const name = document.getElementById('Name').value
         const email = document.getElementById('email').value
         const number = document.getElementById('no').value
-        // eslint-disable-next-line
-        const type = "Guest"
 
         var length = document.getElementById("Name").value.length
         var validRegex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -43,30 +39,29 @@ const Registration = () =>{
         }
 
         else{
+            document.getElementById("SubmitButton").innerHTML  = "Loading...";
             Users.add({
                 Name:name,
                 Email:email,
                 Number:number,
                 Score:0,
-                Time: firebase.firestore.FieldValue.serverTimestamp()
+                StartTime: firebase.firestore.FieldValue.serverTimestamp()
             }).then(doc =>{
-                // history("/question",{state:{id:doc.id}})
                 history("/Instructions", {state:{id:doc.id}})
                 
             })
             console.log(name,email,number,select)
            ;
         }
-    
     }
 
     return(
         <>
             <div style={{display:"flex", flexDirection:"column", width:"100%", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', gap:'5px', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
+                <div style={{display: 'flex', flexDirection: 'column', gap:'5px', alignItems: 'center', justifyContent:'flex-start', height: '100vh'}}>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '10px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '50px', marginBottom: '10px'}}>
                         <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                     </div>
 
@@ -83,20 +78,16 @@ const Registration = () =>{
                     </div>
 
                     <div className="inputdiv">
-                        <input  type="number" placeholder='971 xx xxx xxxx' id='no' style={{textAlign: 'center', background:"transparent", border:"1px solid black", width:"100%", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
+                        <input  type="number" placeholder='PHONE NUMBER' id='no' style={{textAlign: 'center', background:"transparent", border:"1px solid black", width:"100%", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
                     </div>
 
                     <div style={{width: '300px', height: '20px', padding: '0', margin: '0'}}>
                         <p id="error" style={{color: 'red', padding: '0', margin: '0', fontSize: '10px'}}></p>
                     </div>
 
-                    <button onClick={handleSubmit}  style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'black', backgroundColor: 'white', cursor: 'grab'}} >
+                    <button onClick={handleSubmit} id='SubmitButton' style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'black', backgroundColor: 'white', cursor: 'grab'}} >
                         SUBMIT
                     </button>
-
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                        <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
-                    </div>
 
                 </div>
 

@@ -45,23 +45,29 @@ const Instructions = () =>{
                     <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
                 </div>
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
+                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
                     <h1 className="header" style={{color: 'black'}} >INSTRUCTIONS</h1>
+                </div> */}
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '0px', marginBottom: '10px'}}>
+                    {userData && <p style={{color: 'black', fontSize: '20px', fontWeight: '900'}}>Welcome, {userData.Name}!</p>}
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    {userData && <p style={{color: 'black'}}>Welcome, {userData.Name}!</p>}
+                    <p style={{color: 'black'}}>Embark on a trivia adventure! Get ready to answer questions after watching four informative videos.</p>
                 </div>
-
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black', fontStyle:'italic', fontSize: '12px'}}>Blah Blah</p>
+                    <p style={{color: 'black'}}> Score points for correct answers and aim for the top spot on the leaderboard.</p>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
+                    <p style={{color: 'black'}}>Challenge your knowledge, beat your own score, and become the ultimate trivia champion! Good luck!</p>
                 </div>
 
                 {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
                     <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
                 </div> */}
 
-                <button onClick={handleSubmit} style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
+                <button onClick={handleSubmit} style={{width:"220px", marginTop: '25px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
                     BEGIN
                 </button>
 
