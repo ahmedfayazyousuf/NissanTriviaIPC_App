@@ -31,34 +31,67 @@ const Question4 = () => {
 
 
     function handleSubmit() {
-
         const Users = firebase.firestore().collection("Users");
-
-        if (document.getElementById('option1').style.backgroundColor === 'transparent' && document.getElementById('option2').style.backgroundColor === 'transparent' && document.getElementById('option3').style.backgroundColor === 'transparent' && document.getElementById('option4').style.backgroundColor === 'transparent') {
-            
-            document.getElementById("error").innerHTML = "PLEASE CHOOSE AN OPTION";
-            console.log("BOOMER");
-            return;
-
-        }
-
-        if (document.getElementById('option1').style.backgroundColor === 'black' || document.getElementById('option2').style.backgroundColor === 'black' || document.getElementById('option3').style.backgroundColor === 'black' || document.getElementById('option4').style.backgroundColor === 'black') {
-            if (document.getElementById('option3').style.backgroundColor === 'black') {
-                Users.doc(id).update({
-                    Score: firebase.firestore.FieldValue.increment(1),
-                })
-                .then(() => {
-                    console.log("Score updated successfully!");
+    
+        // Capture finish time
+        const finishTime = firebase.firestore.Timestamp.now();
+    
+        Users.doc(id).update({
+            FinishTime: finishTime,
+        })
+        .then(() => {
+            console.log("FinishTime updated successfully!");
+    
+            // Retrieve the document again to get the updated values
+            Users.doc(id).get()
+                .then((doc) => {
+                    if (doc.exists) {
+                        const user = doc.data();
+                        const startTime = user.StartTime && user.StartTime.toDate();
+    
+                        console.log("before time diff");
+    
+                        if (startTime) {
+                            const timeDifferenceInSeconds = Math.floor((finishTime.toMillis() - startTime.getTime()) / 1000);
+    
+                            console.log(timeDifferenceInSeconds);
+                            console.log("after time diff");
+    
+                            Users.doc(id).update({
+                                TimeTaken: timeDifferenceInSeconds,
+                            })
+                            .then(() => {
+                                console.log("TimeTaken updated successfully!");
+    
+                                // Navigate to Score
+                                navigate("/Score", { state: { id, userData } });
+                            })
+                            .catch((error) => {
+                                console.error("Error updating TimeTaken:", error);
+                            });
+                        } else {
+                            console.log("StartTime not available.");
+                        }
+                    } else {
+                        console.log("No such document!");
+                    }
                 })
                 .catch((error) => {
-                    console.error("Error updating score:", error);
+                    console.log("Error getting document:", error);
                 });
-            }
-            navigate("/Score", { state: { id, userData } });
-        }
-
+        })
+        .catch((error) => {
+            console.error("Error updating FinishTime:", error);
+        });
     }
+    
+    
+    
 
+    
+    
+
+    
     console.log("user in Video1:", user); 
 
     function Handleclick(e){

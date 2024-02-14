@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../Styles&Assets/style.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
-// import logo2 from '../Styles&Assets/logo2.png';
 import frame from '../Styles&Assets/LockupFrame.png';
 import tickk from '../Styles&Assets/tick.png'
 import cross from '../Styles&Assets/cross.png'
@@ -17,7 +16,6 @@ const Score = () => {
     const [userData, setUserData] = useState(null);
 
     useEffect(() => {
-        // Fetch user data from Firebase using userId
         const Users = firebase.firestore().collection("Users");
 
         Users.doc(userId).get()
@@ -94,20 +92,12 @@ const Score = () => {
                             <p style={{color: 'white', fontWeight: '900'}}>TIME TAKEN</p>
                         </div>
 
-                        <div style={{width: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <p style={{color: 'white', fontWeight: '900'}}>{60-location.state.time}</p>
+                        <div style={{width: '40px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            {userData && <p style={{color: 'white', fontWeight: '900'}}>{userData.TimeTaken}</p>}
                         </div>
                     </div>
 
-
-                    <button className="grab" style={{width:"220px", marginTop: '80px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit} >SUBMIT</button>
-                    
-
-                    {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px'}}>
-                        <img style={{width: '200px'}} src={logo2} alt="Nissan Logo"/>
-                    </div> */}
-
-
+                    <button className="grab" style={{width:"220px", marginTop: '80px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>SUBMIT</button>
 
                 </div>
             </div>
