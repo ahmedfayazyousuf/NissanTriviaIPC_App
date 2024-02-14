@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*, body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@font-face{
+  font-family: myFont;
+  src:url(/src/components/Styles&Assets/Fonts/NissanBrand-Light.ttf);
+}
+*{
+  font-family: myFont;
+}
+
+@font-face{
+  font-family: myFontBold;
+  src:url(/src/components/Styles&Assets/Fonts/NissanBrand-Bold.ttf);
+}
+h1{
+  font-family: myFontBold;
+}
+
+body{
+    background-image: url("desktopbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html, body {
+    height: 100vh;
+    background-color: #002277;
+    overflow-x: hidden;
+}
+
+.header{
+    padding-right: 50px;
+    padding-left: 50px;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+    font-weight: 300;
+}
+
+.inputdiv{
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputdiv2{
+    width: 393px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidediv{
+    display: flex;
+    width: 30%;
+    height: 100vh;
+}
+
+.maindiv{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+}
+
+.mainer{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+@media only screen and (max-width: 600px) {
+
+    body{
+        background-image: url("phonebg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+
+    .back{
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/xtrailgame-b9f5c.appspot.com/o/PhoneBG.png?alt=media&token=40ea356e-709f-483b-bbd3-2f641e1b9be5");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header{
+        font-size: 30px;
+    }
+
+    .inputdiv{
+        width: 270px;
+    }
+
+    .inputdiv2{
+        width: 293px;
+    }
+
+    /* .logo{
+        margin-top: -80px;
+    } */
+    .hidediv{
+        display:none;
+    }
+
+    .maindiv{
+        width: 100%;
+    }
+    .mainer{
+        width: 100vw;
+    }
+  }
+
+
+
+
+
+  .base-timer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: #74B4F3;
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+  }
