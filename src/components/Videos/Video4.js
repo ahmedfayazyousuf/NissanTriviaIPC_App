@@ -37,13 +37,13 @@ const Video4 = () => {
     console.log("user in Video4:", user); // Log user to check if it's fetched correctly
 
     return (
-        <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', backgroundColor: 'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
 
-            <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                {userData && <p style={{ color: 'yellow' }}>Welcome, {userData.Name}!</p>}
+            <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                {userData && <p style={{ color: 'black', fontWeight: '900'}}>{userData.Name}</p>}
             </div>
 
-            <div style={{ width: '100vw', height: '80vh', overflow: 'hidden', backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{ width: '100vw', height: '60vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <ReactPlayer
                     url={`${process.env.PUBLIC_URL}/Videos/Episode4Amna.mp4`}
                     playing
@@ -54,8 +54,8 @@ const Video4 = () => {
                 />
             </div>
 
-            <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <button onClick={handleSubmit} style={{ backgroundColor: '#002277', color: 'white', width: '150px', height: '37px' , border: '1px solid white', cursor: 'grab',}}>
+            <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10px'}}>
+                <button onClick={handleSubmit} style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
                     Proceed
                 </button>
             </div>

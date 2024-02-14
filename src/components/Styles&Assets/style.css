@@ -96,7 +96,7 @@ html, body {
 @media only screen and (max-width: 600px) {
 
     body{
-        background-image: url("phonebg.png");
+        background-image: url("phonebg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     

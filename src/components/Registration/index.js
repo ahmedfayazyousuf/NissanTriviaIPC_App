@@ -64,14 +64,14 @@ const Registration = () =>{
         <>
             <div style={{display:"flex", flexDirection:"column", width:"100%", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', width: '40%', gap:'5px', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
+                <div style={{display: 'flex', flexDirection: 'column', gap:'5px', alignItems: 'center', justifyContent:'center', height: '100vh'}}>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '10px'}}>
                         <img style={{width: '320px'}} src={frame} alt="Geely Logo"/>
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px'}}>
-                        <h1 className="header" >REGISTRATION</h1>
+                        <h1 className="header" style={{color: 'transparent'}}>REGISTRATION</h1>
                     </div>
 
                     <div className="inputdiv">
@@ -90,7 +90,7 @@ const Registration = () =>{
                         <p id="error" style={{color: 'red', padding: '0', margin: '0', fontSize: '10px'}}></p>
                     </div>
 
-                    <button onClick={handleSubmit} style={{backgroundColor: '#002277', color: 'white', width: '150px', height: '37px' , border: '1px solid white', cursor: 'grab', marginTop: '20px'}}>
+                    <button onClick={handleSubmit}  style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}}  >
                         SUBMIT
                     </button>
 
