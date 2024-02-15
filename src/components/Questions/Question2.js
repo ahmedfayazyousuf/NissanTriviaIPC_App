@@ -46,6 +46,7 @@ const Question2 = () => {
             if (document.getElementById('option1').style.backgroundColor === 'black') {
                 Users.doc(id).update({
                     Score: firebase.firestore.FieldValue.increment(1),
+                    Question2: 'Correct'
                 })
                 .then(() => {
                     console.log("Score updated successfully!");

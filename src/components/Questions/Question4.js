@@ -42,9 +42,12 @@ const Question4 = () => {
 
         
         if (document.getElementById('option1').style.backgroundColor === 'black' || document.getElementById('option2').style.backgroundColor === 'black' || document.getElementById('option3').style.backgroundColor === 'black' || document.getElementById('option4').style.backgroundColor === 'black') {
+                document.getElementById("SubmitButton").innerHTML  = "Loading...";
+
                 if (document.getElementById('option2').style.backgroundColor === 'black') {
                     Users.doc(id).update({
                         Score: firebase.firestore.FieldValue.increment(1),
+                        Question4: 'Correct'
                     })
                     .then(() => {
                         console.log("Score updated successfully!");
@@ -186,7 +189,7 @@ return(
                 <p id="error" style={{color: 'red', padding: '0', margin: '0', fontSize: '10px'}}></p>
             </div>
 
-            <button className="grab" style={{width:"220px", marginTop: '-15px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
+            <button className="grab" id='SubmitButton' style={{width:"220px", marginTop: '-15px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
             
         </div>
     </div>

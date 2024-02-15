@@ -3,26 +3,22 @@ import '../Styles&Assets/style.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
 import frame from '../Styles&Assets/LockupFrame.png';
-import tickk from '../Styles&Assets/tick.png';
-import cross from '../Styles&Assets/cross.png';
+import tickk from '../Styles&Assets/tick.png'
+import cross from '../Styles&Assets/cross.png'
+// import clock from '../Styles&Assets/clock.png'
 
 const Score = () => {
+    
     const location = useLocation();
     const navigate = useNavigate();
     const userId = location.state.id;
+    // eslint-disable-next-line
     const [userData, setUserData] = useState(null);
 
     useEffect(() => {
-        // Reload the page once when the component mounts
-        if (!localStorage.getItem("reloaded")) {
-            window.location.reload();
-            localStorage.setItem("reloaded", "true");
-        }
-
         const Users = firebase.firestore().collection("Users");
-
-        Users.doc(userId)
-            .get()
+    
+        Users.doc(userId).get()
             .then((doc) => {
                 if (doc.exists) {
                     const user = doc.data();
@@ -36,6 +32,8 @@ const Score = () => {
                 console.log("Error getting document:", error);
             });
     }, [userId]);
+
+    
 
     function handleSubmit(){
         navigate("/ThankYou", { state: { id: userId, userData } });
