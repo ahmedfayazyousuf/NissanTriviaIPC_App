@@ -33,6 +33,10 @@ const Leaderboard = () => {
 
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <div style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '10px' }}>
+            <div style={{ flex: '0.5', textAlign: 'center', fontSize: '8px' }}>
+              <h1 style={{color: 'transparent'}}>#</h1>
+            </div>
+
             <div style={{ flex: '1', textAlign: 'left', fontSize: '8px' }}>
               <h1>NAME</h1>
             </div>
@@ -42,12 +46,18 @@ const Leaderboard = () => {
             </div>
 
             <div style={{ flex: '1', textAlign: 'right', fontSize: '8px' }}>
-              <h1>TIME TAKEN</h1>
+              <h1>TIME</h1>
             </div>
           </div>
 
           {leaderboardData.map((user, index) => (
-            <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px' }}>
+            <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
+              <div style={{ flex: '0.5', textAlign: 'center', fontSize: '8px' }}>
+                <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
+                </div>
+              </div>
+
               <div style={{ flex: '1', textAlign: 'left', fontSize: '8px', justifyContent: 'center', alignItems: 'center'}}>
                 <h1>{user.Name.split(' ')[0]}</h1>
               </div>
