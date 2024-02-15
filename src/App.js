@@ -19,6 +19,7 @@ import Question3 from './components/Questions/Question3.js';
 import Question4 from './components/Questions/Question4.js';
 
 import Instructions from './components/Instructions';
+import Leaderboard from './components/Leaderboard';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
 
             <Route path="/score" element={<Score />} />
             <Route path="/Thankyou" element={<Thankyou />} />
+            <Route path="/Leaderboard" element={<Leaderboard />} />
             
             <Route exact path="*" element={<Error />} />
         </Routes>
