@@ -42,7 +42,7 @@ const Question4 = () => {
         if (document.getElementById('option1').style.backgroundColor === 'black' || document.getElementById('option2').style.backgroundColor === 'black' || document.getElementById('option3').style.backgroundColor === 'black' || document.getElementById('option4').style.backgroundColor === 'black') {
                 document.getElementById("SubmitButton").innerHTML  = "Loading...";
 
-                if (document.getElementById('option2').style.backgroundColor === 'black') {
+                if (document.getElementById('option1').style.backgroundColor === 'black') {
                     Users.doc(id).update({
                         Score: firebase.firestore.FieldValue.increment(1),
                         Question4: 'Correct'
