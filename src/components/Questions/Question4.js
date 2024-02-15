@@ -42,7 +42,17 @@ const Question4 = () => {
 
         
         if (document.getElementById('option1').style.backgroundColor === 'black' || document.getElementById('option2').style.backgroundColor === 'black' || document.getElementById('option3').style.backgroundColor === 'black' || document.getElementById('option4').style.backgroundColor === 'black') {
-            if (document.getElementById('option2').style.backgroundColor === 'black') {
+                if (document.getElementById('option2').style.backgroundColor === 'black') {
+                    Users.doc(id).update({
+                        Score: firebase.firestore.FieldValue.increment(1),
+                    })
+                    .then(() => {
+                        console.log("Score updated successfully!");
+                    })
+                    .catch((error) => {
+                        console.error("Error updating score:", error);
+                    });
+                }
                 Users.doc(id).update({
                     FinishTime: finishTime,
                 })
@@ -84,7 +94,6 @@ const Question4 = () => {
                 .catch((error) => {
                     console.error("Error updating FinishTime:", error);
                 });
-            }
             navigate("/Score", { state: { id, userData } });
         }
     }
