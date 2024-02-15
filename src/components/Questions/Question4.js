@@ -97,7 +97,7 @@ const Question4 = () => {
                     console.error("Error updating FinishTime:", error);
                 });
             // navigate("/Score", { state: { id, userData } });
-            window.location.href = 'https://nissantrivia.vercel.app/Score';
+            // window.location.href = 'https://nissantrivia.vercel.app/Score';
         }
     }
     
