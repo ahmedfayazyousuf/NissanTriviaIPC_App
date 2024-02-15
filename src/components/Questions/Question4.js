@@ -27,8 +27,6 @@ const Question4 = () => {
                 console.log("Error getting document:", error);
             });
     }, [id, userData]); 
-
-
  
     function handleSubmit() {
         const Users = firebase.firestore().collection("Users");
@@ -78,7 +76,8 @@ const Question4 = () => {
                                     })
                                     .then(() => {
                                         console.log("TimeTaken updated successfully!");
-                                        navigate("/Score", { state: { id, userData } });
+                                        // navigate("/Score", { state: { id, userData } });
+                                        window.location.href = 'https://nissantrivia.vercel.app/Score';
                                     })
                                     .catch((error) => {
                                         console.error("Error updating TimeTaken:", error);
@@ -100,13 +99,6 @@ const Question4 = () => {
             navigate("/Score", { state: { id, userData } });
         }
     }
-    
-    
-    
-
-    
-    
-
     
     console.log("user in Video1:", user); 
 
