@@ -76,8 +76,7 @@ const Question4 = () => {
                                     })
                                     .then(() => {
                                         console.log("TimeTaken updated successfully!");
-                                        // navigate("/Score", { state: { id, userData } });
-                                        window.location.href = 'https://nissantrivia.vercel.app/Score';
+                                        navigate("/Score", { state: { id, userData } });
                                     })
                                     .catch((error) => {
                                         console.error("Error updating TimeTaken:", error);
@@ -96,8 +95,7 @@ const Question4 = () => {
                 .catch((error) => {
                     console.error("Error updating FinishTime:", error);
                 });
-            // navigate("/Score", { state: { id, userData } });
-            // window.location.href = 'https://nissantrivia.vercel.app/Score';
+            navigate("/Score", { state: { id, userData } });
         }
     }
     
