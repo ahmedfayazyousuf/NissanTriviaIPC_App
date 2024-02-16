@@ -98,10 +98,6 @@ const Registration = () =>{
                             <input type="email" placeholder='EMAIL' id='email' style={{textAlign: 'center',background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
                         </div>
 
-                        {/* <div className="inputdiv">
-                            <input  type="number" placeholder='PHONE NUMBER' id='no' style={{textAlign: 'center',background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
-                        </div> */}
-
                     <div style={{width:"85vw", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '70px'}}>
                         <select id="countryCode" required style={{textAlign: 'center',background:"white", border:"1px solid black", marginBottom:'15px', width:"30%", height:'39px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }}>
                             <option selected value="(+971) UAE">(+971)</option>
