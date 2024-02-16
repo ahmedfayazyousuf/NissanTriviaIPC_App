@@ -25,14 +25,6 @@ input[type=number] {
   font-family: myFont;
 }
 
-/* @font-face{
-  font-family: myFontBold;
-  src:url(/src/components/Styles&Assets/Fonts/NissanBrand-Bold.ttf);
-}
-h1{
-  font-family: myFontBold;
-} */
-
 body{
   background-image: url("phonebg.jpg");
     background-repeat: no-repeat;
@@ -192,3 +184,22 @@ html, body {
     font-size: 24px;
     color: white;
   }
+
+
+
+
+  /* Add this to your CSS file */
+.social-icon {
+  display: flex;
+  margin: 0 10px;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  border-radius: 100%;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
