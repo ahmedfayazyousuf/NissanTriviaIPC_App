@@ -83,12 +83,12 @@ const Registration = () =>{
                         <img style={{width: '120px'}} src={frame} alt="Nissan Logo"/>
                     </div>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px', marginTop: '30px'}}>
                         <h3 className="header" style={{color: 'black', fontSize: '20px'}}>IPR Educational Content</h3>
                         <h3 className="header" style={{color: 'black', fontSize: '20px', marginTop: '-20px'}}>Watch, Participate & Win.</h3>
                     </div>
 
-                    <div style={{width: '80vw', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '100px'}}>
+                    <div style={{width: '80vw', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '40px'}}>
 
                         <div className="inputdiv">
                             <input type="text" placeholder='NAME' id="Name" style={{textAlign: 'center', background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
