@@ -114,7 +114,7 @@ return(
         <div style={{display: 'flex', flexDirection: 'column', gap:'5px', alignItems: 'center', justifyContent:'flex-start', height: '100vh'}}>
             
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '50px', marginBottom: '10px'}}>
-                <img style={{width: '320px'}} src={frame} alt="Nissan Logo"/>
+                <img style={{width: '120px'}} src={frame} alt="Nissan Logo"/>
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom: '-20px'}}>

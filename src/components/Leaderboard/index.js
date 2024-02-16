@@ -24,7 +24,7 @@ const Leaderboard = () => {
     <>
       <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", textAlign: 'center', backgroundColor: '#fff', padding: '10px', height: '100vh' }}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
-          <img style={{ width: '60%' }} src={NissanLogo} alt="Nissan Logo" />
+          <img style={{ width: '100px' }} src={NissanLogo} alt="Nissan Logo" />
         </div>
 
         <div style={{ width: '70%', backgroundColor: '#000', padding: '10px', color: 'white', textAlign: 'center', marginBottom: '10px' }}>
