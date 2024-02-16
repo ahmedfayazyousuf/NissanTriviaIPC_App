@@ -96,6 +96,7 @@ const Question4 = () => {
                     console.error("Error updating FinishTime:", error);
                 });
             navigate("/Score", { state: { id, userData } });
+            navigate(0);
         }
     }
     

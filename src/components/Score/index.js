@@ -38,7 +38,7 @@ const Score = () => {
     function handleSubmit(){
         navigate("/ThankYou", { state: { id: userId, userData } });
     }
-
+ 
 
     return(
         <div style={{display:"flex", flexDirection:"column", width:"100%", height: "100vh", justifyContent:"flex-start", alignItems:"center"}}>
