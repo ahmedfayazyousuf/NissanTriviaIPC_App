@@ -84,7 +84,7 @@ const Registration = () =>{
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px', marginTop: '30px'}}>
-                        <h3 className="header" style={{color: 'black', fontSize: '20px'}}>IPR Educational Content</h3>
+                        <h3 className="header" style={{color: 'black', fontSize: '20px'}}>IPR Educational Content.</h3>
                         <h3 className="header" style={{color: 'black', fontSize: '20px', marginTop: '-20px'}}>Watch, Participate & Win.</h3>
                     </div>
 
