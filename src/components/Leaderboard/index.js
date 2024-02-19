@@ -4,21 +4,36 @@ import NissanLogo from '../Styles&Assets/NissanLogo.png';
 
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
+  const [selectedEntity, setSelectedEntity] = useState('All'); // Default value is 'All'
 
-  useEffect(() => {
-    const fetchLeaderboardData = async () => {
-      const usersRef = firebase.firestore().collection('Users');
-      const snapshot = await usersRef.orderBy('Score', 'desc').orderBy('TimeTaken').limit(10).get();
+  // Inside the useEffect
+useEffect(() => {
+  const fetchLeaderboardData = async () => {
+    let usersRef = firebase.firestore().collection('Users');
 
-      const data = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+    // Apply filter if an entity is selected
+    if (selectedEntity !== 'All') {
+      console.log('Applying filter for entity:', selectedEntity);
+      usersRef = usersRef.where('Entity', '==', selectedEntity);
+    }
 
-      setLeaderboardData(data);
-    };
-    fetchLeaderboardData();
-  }, []);
+    const snapshot = await usersRef.orderBy('Score', 'desc').orderBy('TimeTaken').limit(10).get();
+
+    const data = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    console.log('Leaderboard data:', data);
+    setLeaderboardData(data);
+  };
+
+  fetchLeaderboardData();
+}, [selectedEntity]); // Re-run useEffect when the selectedEntity changes
+
+  const handleEntityChange = (event) => {
+    setSelectedEntity(event.target.value);
+  };
 
   return (
     <>
@@ -32,6 +47,23 @@ const Leaderboard = () => {
         </div>
 
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <select value={selectedEntity} onChange={handleEntityChange} style={{ marginBottom: '10px' }}>
+            <option value="All">All Entities</option>
+            <option value="Ministry of Interior">Ministry of Interior</option>  
+            <option value="Ministry of Economy">Ministry of Economy</option>
+            <option value="Dubai Police">Dubai Police</option>
+            <option value="Dubai Customs">Dubai Customs</option>
+            <option value="Interpol">Interpol</option>
+            <option value="Brand Owners' Protection Group">Brand Owners' Protection Group</option>
+            <option value="SAM IP">SAM IP</option>
+            <option value="Al Hamad Group of Companies">Al Hamad Group of Companies</option>
+            <option value="EIPA">EIPA</option>
+            <option value="IP Crime College Investigators">IP Crime College Investigators</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+
+        <div style={{ width: '85%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <div style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '10px' }}>
             <div style={{ flex: '0.5', textAlign: 'center', fontSize: '8px' }}>
               <h1 style={{color: 'transparent'}}>#</h1>
@@ -39,6 +71,10 @@ const Leaderboard = () => {
 
             <div style={{ flex: '1', textAlign: 'left', fontSize: '8px' }}>
               <h1>NAME</h1>
+            </div>
+
+            <div style={{ flex: '1', textAlign: 'left', fontSize: '8px' }}>
+              <h1>ENTITY</h1>
             </div>
 
             <div style={{ flex: '1', textAlign: 'center', fontSize: '8px' }}>
@@ -60,6 +96,10 @@ const Leaderboard = () => {
 
               <div style={{ flex: '1', textAlign: 'left', fontSize: '8px', justifyContent: 'center', alignItems: 'center'}}>
                 <h1>{user.Name.split(' ')[0]}</h1>
+              </div>
+
+              <div style={{ flex: '1', textAlign: 'left', fontSize: '8px', justifyContent: 'center', alignItems: 'center'}}>
+                <h1>{user.Entity}</h1>
               </div>
 
               <div style={{ flex: '1', textAlign: 'center', fontSize: '8px' }}>
