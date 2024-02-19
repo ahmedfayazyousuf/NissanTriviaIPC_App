@@ -4,11 +4,14 @@ import NissanLogo from '../Styles&Assets/NissanLogo.png';
 
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
-  const [selectedEntity, setSelectedEntity] = useState('All'); 
-  
-  useEffect(() => {
+  const [selectedEntity, setSelectedEntity] = useState('All'); // Default value is 'All'
+
+  // Inside the useEffect
+useEffect(() => {
   const fetchLeaderboardData = async () => {
     let usersRef = firebase.firestore().collection('Users');
+
+    // Apply filter if an entity is selected
     if (selectedEntity !== 'All') {
       console.log('Applying filter for entity:', selectedEntity);
       usersRef = usersRef.where('Entity', '==', selectedEntity);
@@ -26,7 +29,7 @@ const Leaderboard = () => {
   };
 
   fetchLeaderboardData();
-}, [selectedEntity]);
+}, [selectedEntity]); // Re-run useEffect when the selectedEntity changes
 
   const handleEntityChange = (event) => {
     setSelectedEntity(event.target.value);
@@ -83,37 +86,31 @@ const Leaderboard = () => {
             </div>
           </div>
 
-          {leaderboardData
-            .filter((user) => user.Score <= 4) // Filter scores less than or equal to 4
-            .concat(leaderboardData.filter((user) => user.Score > 4).slice(0, 10)) // Concatenate with up to 10 scores greater than 4
-            .map((user, index) => (
-              <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
-
-                <div style={{ flex: '0.5', textAlign: 'center', fontSize: '6px' }}>
-                  <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
-                  </div>
-                </div>
-
-                <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
-                  <h1>{user.Name.split(' ')[0]}</h1>
-                </div>
-
-                <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
-                  <h1>{user.Entity}</h1>
-                </div>
-
-                <div style={{ flex: '1', textAlign: 'center', fontSize: '6px' }}>
-                  <h1>{user.Score}</h1>
-                </div>
-
-                <div style={{ flex: '1', textAlign: 'right', fontSize: '6px' }}>
-                  <h1>{user.TimeTaken}</h1>
+          {leaderboardData.map((user, index) => (
+            <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
+              <div style={{ flex: '0.5', textAlign: 'center', fontSize: '6px' }}>
+                <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
                 </div>
               </div>
-            ))
-          }
 
+              <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
+                <h1>{user.Name.split(' ')[0]}</h1>
+              </div>
+
+              <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
+                <h1>{user.Entity}</h1>
+              </div>
+
+              <div style={{ flex: '1', textAlign: 'center', fontSize: '6px' }}>
+                <h1>{user.Score}</h1>
+              </div>
+
+              <div style={{ flex: '1', textAlign: 'right', fontSize: '6px' }}>
+                <h1>{user.TimeTaken}</h1>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

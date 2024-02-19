@@ -5,7 +5,7 @@ import firebase from '../../firebase';
 import frame from '../Styles&Assets/LockupFrame.png';
 import tickk from '../Styles&Assets/tick.png'
 import cross from '../Styles&Assets/cross.png'
-// import clock from '../Styles&Assets/clock.png'
+import clock from '../Styles&Assets/clock.png'
 
 const Score = () => {
     
@@ -46,7 +46,7 @@ const Score = () => {
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '50px', marginBottom: '10px'}}>
                     <img style={{width: '120px'}} src={frame} alt="Nissan Logo"/>
-                </div>
+                </div> 
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px', marginTop: '30px'}}>
                     <h3 className="header" style={{color: 'black', fontSize: '20px', fontWeight: '900'}}>"Know How" Challenge</h3>
@@ -85,7 +85,7 @@ const Score = () => {
                     </div>
 
 
-                    {/* <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '300px', padding: '10px', paddingBottom: '10px', border: '1px solid white', borderTop: 'none', backgroundColor: 'black'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '300px', padding: '10px', paddingBottom: '10px', border: '1px solid white', borderTop: 'none', backgroundColor: 'black'}}>
                         <div style={{width: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                             <img style={{width: '40px'}} src={clock} alt="Nissan Logo"/>
                         </div>
@@ -97,7 +97,7 @@ const Score = () => {
                         <div style={{width: '40px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                             {userData && <p style={{color: 'white', fontWeight: '900'}}>{userData.TimeTaken}</p>}
                         </div>
-                    </div> */}
+                    </div>
 
                     <button className="grab" style={{width:"220px", marginTop: '80px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>SUBMIT</button>
 

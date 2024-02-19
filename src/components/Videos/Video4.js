@@ -39,7 +39,7 @@ const Video4 = () => {
         <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
 
             <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <p style={{ color: 'black', fontWeight: '900'}}>Always Inspect the Packaging!</p>
+                <p style={{ color: 'black', fontWeight: '900'}}>Identify the real Packaging!</p>
             </div>
 
             <div style={{ width: '100vw', height: '60vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
