@@ -49,8 +49,8 @@ const Score = () => {
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px', marginTop: '30px'}}>
-                    <h3 className="header" style={{color: 'black', fontSize: '20px'}}>"Know How" Challenge.</h3>
-                    <h3 className="header" style={{color: 'black', fontSize: '20px', marginTop: '-20px'}}>Watch, Participate & Win.</h3>
+                    <h3 className="header" style={{color: 'black', fontSize: '20px', fontWeight: '900'}}>"Know How" Challenge</h3>
+                    <h3 className="header" style={{color: 'black', fontSize: '20px', marginTop: '-20px'}}>Watch, Participate & Win</h3>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
