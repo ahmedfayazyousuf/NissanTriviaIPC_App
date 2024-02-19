@@ -48,14 +48,10 @@ const Score = () => {
                     <img style={{width: '120px'}} src={frame} alt="Nissan Logo"/>
                 </div>
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px'}}>
-                    <h3 className="header" style={{color: 'black', fontSize: '20px'}}>IPR Educational Content</h3>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom:'10px', marginTop: '30px'}}>
+                    <h3 className="header" style={{color: 'black', fontSize: '20px'}}>"Know How" Challenge.</h3>
                     <h3 className="header" style={{color: 'black', fontSize: '20px', marginTop: '-20px'}}>Watch, Participate & Win.</h3>
                 </div>
-
-                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginBottom: '-30px'}}>
-                    <h1 className="header" style={{color: 'transparent'}}>TRIVIA GAME</h1>
-                </div> */}
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
                     
