@@ -87,30 +87,34 @@ useEffect(() => {
           </div>
 
           {leaderboardData.map((user, index) => (
-            <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
-              <div style={{ flex: '0.5', textAlign: 'center', fontSize: '6px' }}>
-                <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
+            // Check if the score is 4 or lower
+            user.Score <= 4 && (
+              <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
+                <div style={{ flex: '0.5', textAlign: 'center', fontSize: '6px' }}>
+                  <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
+                  </div>
+                </div>
+
+                <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
+                  <h1>{user.Name.split(' ')[0]}</h1>
+                </div>
+
+                <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
+                  <h1>{user.Entity}</h1>
+                </div>
+
+                <div style={{ flex: '1', textAlign: 'center', fontSize: '6px' }}>
+                  <h1>{user.Score}</h1>
+                </div>
+
+                <div style={{ flex: '1', textAlign: 'right', fontSize: '6px' }}>
+                  <h1>{user.TimeTaken}</h1>
                 </div>
               </div>
-
-              <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
-                <h1>{user.Name.split(' ')[0]}</h1>
-              </div>
-
-              <div style={{ flex: '1', textAlign: 'left', fontSize: '6px', justifyContent: 'center', alignItems: 'center'}}>
-                <h1>{user.Entity}</h1>
-              </div>
-
-              <div style={{ flex: '1', textAlign: 'center', fontSize: '6px' }}>
-                <h1>{user.Score}</h1>
-              </div>
-
-              <div style={{ flex: '1', textAlign: 'right', fontSize: '6px' }}>
-                <h1>{user.TimeTaken}</h1>
-              </div>
-            </div>
+            )
           ))}
+
         </div>
       </div>
     </>

@@ -46,7 +46,7 @@ const Instructions = () => {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginTop: '20px' }}>
-          {userData && <h1 className="header" style={{ color: 'black', fontSize: '22px', width: '70%' }}>Thank You, {userData.Name}!</h1>}
+          {userData && <h1 className="header" style={{ color: 'black', fontSize: '22px', width: '70%' }}>Thank You, {userData.Name.split(' ')[0]}!</h1>}
           <h1 className="header" style={{ color: 'black', marginTop: '0px', fontSize: '22px', width: '70%'  }}>Keep Defying Ordinary</h1>
         </div>
 
