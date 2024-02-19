@@ -6,11 +6,10 @@ import frame from '../Styles&Assets/NissanLogo.png'
 
 const Registration = () =>{
     const history = useNavigate();
-    // eslint-disable-next-line
     const [select, setSelect] = useState('')
 
     function handleSubmit(){
-        const dropdownValue = select; // Get the selected value from the dropdown
+        const dropdownValue = select; 
 
         const Users = firebase.firestore().collection("Users");
 
@@ -58,7 +57,7 @@ const Registration = () =>{
                 Number:number,
                 Score:0,
                 StartTime: firebase.firestore.FieldValue.serverTimestamp(),
-                Entity: dropdownValue, // Save the selected dropdown value to Firestore
+                Entity: dropdownValue,
                 CountryCode: CountryCode,
             }).then(doc =>{
                 history("/Instructions", {state:{id:doc.id}})

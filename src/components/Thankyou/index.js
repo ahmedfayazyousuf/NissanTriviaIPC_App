@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faYoutube, faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '../Styles&Assets/style.css';
 import tick from '../Styles&Assets/tick2.png';
 import frame from '../Styles&Assets/LockupFrame.png';

@@ -10,9 +10,8 @@ const Video3 = () => {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        console.log("userId in Video3:", id); // Log the userId to check if it's correct
-        console.log("userData in Video3 useEffect:", userData); // Log userData to check if it's passed correctly
-        // Fetch user data from Firebase using userId
+        console.log("userId in Video3:", id); 
+        console.log("userData in Video3 useEffect:", userData); 
         const Users = firebase.firestore().collection("Users");
 
         Users.doc(id).get()
@@ -30,17 +29,16 @@ const Video3 = () => {
     }, [id, userData]); 
 
     function handleSubmit() {
-        console.log("userData in Video3 handleSubmit:", userData); // Log userData before navigating
+        console.log("userData in Video3 handleSubmit:", userData);
         navigate("/Question3", { state: { id, userData } });
     }
 
-    console.log("user in Video3:", user); // Log user to check if it's fetched correctly
+    console.log("user in Video3:", user); 
 
     return (
         <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
 
             <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                {/* {userData && <p style={{ color: 'black', fontWeight: '900'}}>{userData.Name}</p>} */}
                 <p style={{ color: 'black', fontWeight: '900'}}>Durability is Key!</p>
             </div>
 

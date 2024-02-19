@@ -83,7 +83,6 @@ html, body {
     gap: 5px;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
 }
 @media only screen and (max-width: 600px) {
 
@@ -134,7 +133,7 @@ html, body {
   }
   
   .base-timer__svg {
-    transform: scaleX(-1);
+    transform: scaleX(-1); 
   }
   
   .base-timer__circle {
