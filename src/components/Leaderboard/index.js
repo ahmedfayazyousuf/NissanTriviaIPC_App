@@ -86,10 +86,12 @@ useEffect(() => {
             </div>
           </div>
 
-          {leaderboardData.map((user, index) => (
-            // Check if the score is 4 or lower
-            user.Score <= 4 && (
+          {leaderboardData
+            .filter((user) => user.Score <= 4) // Filter scores less than or equal to 4
+            .concat(leaderboardData.filter((user) => user.Score > 4).slice(0, 10)) // Concatenate with up to 10 scores greater than 4
+            .map((user, index) => (
               <div key={user.id} style={{ display: 'flex', width: '100%', borderBottom: '1px solid black', padding: '3px', alignItems: 'center' }}>
+                
                 <div style={{ flex: '0.5', textAlign: 'center', fontSize: '6px' }}>
                   <div style={{ backgroundColor: 'black', borderRadius: '50%', padding: '4px', width: '20px', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <h1 style={{ color: 'white', margin: '0' }}>{index + 1}</h1>
@@ -112,8 +114,8 @@ useEffect(() => {
                   <h1>{user.TimeTaken}</h1>
                 </div>
               </div>
-            )
-          ))}
+            ))
+          }
 
         </div>
       </div>
