@@ -37,7 +37,7 @@ useEffect(() => {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", textAlign: 'center', backgroundColor: '#fff', padding: '10px', height: '100vh' }}>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", textAlign: 'center', backgroundColor: '#fff', padding: '10px', height: '100%', paddingBottom: '100px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
           <img style={{ width: '100px' }} src={NissanLogo} alt="Nissan Logo" />
         </div>
