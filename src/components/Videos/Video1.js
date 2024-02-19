@@ -41,7 +41,7 @@ const Video1 = () => {
 
             <div style={{ width: '100vw', height: '10vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 {/* {userData && <p style={{ color: 'black', fontWeight: '900'}}>{userData.Name}</p>} */}
-                <p style={{ color: 'black', fontWeight: '900'}}>Counter the Counterfeits</p>
+                <p style={{ color: 'black', fontWeight: '900'}}>Customer Safety First!</p>
             </div>
 
             <div style={{ width: '100vw', height: '60vh', overflow: 'hidden', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
