@@ -45,15 +45,15 @@ const Instructions = () => {
           <img style={{ width: '120px' }} src={frame} alt="Nissan Logo" />
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '20px' }}>
-          {userData && <h1 className="header" style={{ color: 'black' }}>Thank You, {userData.Name}!</h1>}
-          <h1 className="header" style={{ color: 'black', marginTop: '0px' }}>Keep Defying Ordinary</h1>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', marginTop: '20px' }}>
+          {userData && <h1 className="header" style={{ color: 'black', fontSize: '25px', width: '70%' }}>Thank You, {userData.Name}!</h1>}
+          <h1 className="header" style={{ color: 'black', marginTop: '0px', fontSize: '25px', width: '70%'  }}>Keep Defying Ordinary</h1>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '35px' }}>
           <img style={{ width: '150px' }} src={tick} alt="Tick Logo" />
         </div>
-
+ 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', gap: '10px' }}>
             <a href="https://youtube.com/@NissanMiddleEast?si=GOF1xHptihDcuKl6" target="_blank" rel="noopener noreferrer" className='social-icon'>
                 <img src={YouTube} alt='YouTube Logo' style={{width: '40px'}}></img>
