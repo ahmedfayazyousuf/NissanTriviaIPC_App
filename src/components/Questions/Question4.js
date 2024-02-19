@@ -77,6 +77,7 @@ const Question4 = () => {
                                     .then(() => {
                                         console.log("TimeTaken updated successfully!");
                                         navigate("/Score", { state: { id, userData } });
+                                        navigate(0);
                                     })
                                     .catch((error) => {
                                         console.error("Error updating TimeTaken:", error);
@@ -95,8 +96,8 @@ const Question4 = () => {
                 .catch((error) => {
                     console.error("Error updating FinishTime:", error);
                 });
-            navigate("/Score", { state: { id, userData } });
-            navigate(0);
+            // navigate("/Score", { state: { id, userData } });
+            // navigate(0);
         }
     }
     
