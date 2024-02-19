@@ -49,8 +49,13 @@ const Instructions = () =>{
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black'}}>Embark on a trivia adventure!</p>
+                    <p style={{color: 'black'}}>Nissan continues to counter the counterfeits through initiatives supporting the use of genuine parts.</p>
                 </div>
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
+                    <p style={{color: 'black'}}> Join us in enhancing safety and durability on the road by embarking on this trivia journey.</p>
+                </div>
+
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
                     <p style={{color: 'black'}}>Get ready to answer questions after watching four educational Nissan videos.</p>
@@ -58,12 +63,8 @@ const Instructions = () =>{
 
 
                 {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black'}}> Score points for correct answers and aim for the top spot on the leaderboard.</p>
-                </div> */}
-
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
                     <p style={{color: 'black'}}>Good luck!</p>
-                </div>
+                </div> */}
 
                 <button onClick={handleSubmit} style={{width:"220px", marginTop: '25px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
                     BEGIN
