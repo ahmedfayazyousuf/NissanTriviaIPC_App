@@ -91,15 +91,15 @@ const Registration = () =>{
                     <div style={{width: '80vw', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '40px'}}>
 
                         <div className="inputdiv">
-                            <input type="text" placeholder='NAME' id="Name" style={{textAlign: 'center', background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
+                            <input type="text" placeholder='NAME' id="Name" style={{textAlign: 'center', background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white', maxWidth: '700px'}}/> 
                         </div>
                         
                         <div className="inputdiv">
-                            <input type="email" placeholder='EMAIL' id='email' style={{textAlign: 'center',background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
+                            <input type="email" placeholder='EMAIL' id='email' style={{textAlign: 'center',background:"transparent", border:"1px solid black", marginBottom:'15px', width:"80vw", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' , maxWidth: '700px'}} />
                         </div>
 
                         <div style={{width:"85vw", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '70px'}}>
-                            <select id="countryCode" required style={{textAlign: 'center',background:"white", border:"1px solid black", marginBottom:'15px', width:"30%", height:'39px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }}>
+                            <select id="countryCode" required style={{textAlign: 'center',background:"white", border:"1px solid black", marginBottom:'15px', width:"30%", height:'39px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' , maxWidth: '250px'}}>
                                 <option selected value="(+971) UAE">(+971)</option>
                                 <option value="+213 Algeria">+213 Algeria</option>
                                 <option value="+376 Andorra">+376 Andorra</option>
@@ -317,11 +317,11 @@ const Registration = () =>{
                                 <option value="+263 Zimbabwe">+263 Zimbabwe</option>
 
                             </select>
-                            <input className='specialFont' type="number" placeholder='MOBILE PHONE' id='no' style={{textAlign: 'center',background:"white", border:"1px solid black", marginBottom:'15px', width:"70%", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />            
+                            <input className='specialFont' type="number" placeholder='MOBILE PHONE' id='no' style={{textAlign: 'center',background:"white", border:"1px solid black", marginBottom:'15px', width:"70%", height:'35px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' , maxWidth: '450px'}} />            
                         </div>
 
                         <div className="inputdiv"> 
-                            <select value={select} onChange={handleDropdownChange} id="entity" style={{ textAlign: 'center', background: 'white', border: '1px solid black', marginBottom: '15px', width: '85vw', height: '40px', color: 'black', padding: '10px', paddingRight: '10px', backgroundColor: 'white', }} >
+                            <select value={select} onChange={handleDropdownChange} id="entity" style={{ textAlign: 'center', background: 'white', border: '1px solid black', marginBottom: '15px', width: '85vw', height: '40px', color: 'black', padding: '10px', paddingRight: '10px', backgroundColor: 'white', maxWidth: '720px' }} >
                                 <option value="" disabled>SELECT ENTITY</option>
                                 <option value="Ministry of Interior">Ministry of Interior</option>  
                                 <option value="Ministry of Economy">Ministry of Economy</option>
