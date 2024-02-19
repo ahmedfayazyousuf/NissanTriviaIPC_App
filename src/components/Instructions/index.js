@@ -55,7 +55,11 @@ const Instructions = () =>{
                     <p style={{color: 'black'}}> Score points for correct answers and aim for the top spot on the leaderboard.</p>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black'}}>Challenge your knowledge, beat your own score, and become the ultimate trivia champion! Good luck!</p>
+                    <p style={{color: 'black'}}>Challenge your knowledge, beat your own score, and become the ultimate trivia champion!</p>
+                </div>
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
+                    <p style={{color: 'black'}}>Good luck!</p>
                 </div>
 
                 <button onClick={handleSubmit} style={{width:"220px", marginTop: '25px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} >
