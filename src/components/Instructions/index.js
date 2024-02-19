@@ -49,14 +49,17 @@ const Instructions = () =>{
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black'}}>Embark on a trivia adventure! Get ready to answer questions after watching four informative videos.</p>
+                    <p style={{color: 'black'}}>Embark on a trivia adventure!</p>
                 </div>
+
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
+                    <p style={{color: 'black'}}>Get ready to answer questions after watching four educational Nissan videos.</p>
+                </div>
+
+
+                {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
                     <p style={{color: 'black'}}> Score points for correct answers and aim for the top spot on the leaderboard.</p>
-                </div>
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
-                    <p style={{color: 'black'}}>Challenge your knowledge, beat your own score, and become the ultimate trivia champion!</p>
-                </div>
+                </div> */}
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '80vw', marginTop: '-20px'}}>
                     <p style={{color: 'black'}}>Good luck!</p>
