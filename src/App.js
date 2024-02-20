@@ -20,6 +20,7 @@ import Question4 from './components/Questions/Question4.js';
 
 import Instructions from './components/Instructions';
 import Leaderboard from './components/Leaderboard';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Routes>
             <Route exact path="/" element={<Registration />} />
             <Route path="/Instructions" element={<Instructions />} />
+            <Route path="/Admin" element={<Admin />} />
             
             <Route path="/Video1" element={<Video1/>} />
             <Route path="/Video2" element={<Video2/>} />
